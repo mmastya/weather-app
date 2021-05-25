@@ -1,8 +1,10 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
+import { getWeatherForWeek } from './dataSources/index'
 
 function App () {
+  getWeatherForWeek()
   return (
     <div className="App">
       <header className="App-header">
