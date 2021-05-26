@@ -1,13 +1,33 @@
+@font-face {
+  font-weight: bold;
+  font-family: "Ubuntu";
+  font-style: normal;
+  src: url("./fonts/Ubuntu-Bold.ttf") ;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+   
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url("./images/1.svg") 100% 0 no-repeat fixed,
+              url("./images/5.svg") 100% 0 no-repeat fixed, 
+              url("./images/6.svg") 5% 0 no-repeat fixed,
+              url("./images/2.svg")0 100% no-repeat fixed,
+              url("./images/4.svg")0 100% no-repeat fixed,
+              url("./images/3.svg")0 100% no-repeat fixed;
+  background-size: auto, auto; 
+  background-color: #373AF5;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p {
+  margin: 0;
 }

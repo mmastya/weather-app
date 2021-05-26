@@ -1,0 +1,16 @@
+.weatherAppPage__title {
+    font-family: 'Ubuntu', sans-serif;;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 102px;
+    line-height: 122px;
+    color: #FFFFFF;
+    margin-left: -19%;
+    padding-top: 65px;
+    padding-bottom: 60px;
+}
+
+.weatherAppPage__title-forecast {
+    text-align: right;
+    padding-right: 17%;
+} 

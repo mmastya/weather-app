@@ -1,24 +1,18 @@
+import { transformAndValidate } from 'class-transformer-validator'
 import {
   IsNumber,
   IsNotEmpty,
   IsString,
   ValidateNested,
-  Length,
-  validate
+  Length
 } from 'class-validator'
+import { IWeather, Weather } from './common'
 
 interface IAlert {
   event: string;
   senderName: string;
   description: string;
   start: number;
-}
-
-interface IWeather {
-  id: number;
-  main: string;
-  description: string;
-  icon: string;
 }
 interface iTemp {
   day: number;
@@ -37,7 +31,6 @@ interface IDaily {
 }
 
 export interface IDay {
-  id: number;
   alerts: IAlert[];
   daily: IDaily[];
   lat: number;
@@ -49,27 +42,6 @@ class FeelsLike implements IFeelsLike {
   @IsNotEmpty()
   @IsNumber()
   day!: number;
-}
-
-class Weather implements IWeather {
-  @IsNotEmpty()
-  @IsNumber()
-  id!: number;
-
-  @IsNotEmpty()
-  @IsString()
-  @Length(1, Infinity)
-  main!: string;
-
-  @IsNotEmpty()
-  @IsString()
-  @Length(1, Infinity)
-  description!: string;
-
-  @IsNotEmpty()
-  @IsString()
-  @Length(1, Infinity)
-  icon!: string;
 }
 
 class Temp implements iTemp {
@@ -119,10 +91,6 @@ class Alert implements IAlert {
 
 export class Day implements IDay {
   @IsNotEmpty()
-  @IsNumber()
-  id!: number;
-
-  @IsNotEmpty()
   @ValidateNested()
   alerts!: Alert[];
 
@@ -144,83 +112,26 @@ export class Day implements IDay {
   timezone!: string;
 }
 
-export async function getWeatherForWeek () {
+export async function getWeatherForWeek (
+  lat: number,
+  lon: number,
+  APIKey: string
+): Promise<Day | void> {
   try {
     const response = await fetch(
-      'https://api.openweathermap.org/data/2.5/onecall?lat=53.195873&lon=50.100193&units=metric&lang=ru&appid=6fe7baf784a079185b7c7c4a6042a7ae'
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&lang=ru&appid=${APIKey}`
     )
 
     const data = await response.json()
 
-    console.log(data)
+    const result = await transformAndValidate(Day, data)
 
-    const day = new Day()
+    if (Array.isArray(result)) {
+      return result[0]
+    }
 
-    day.id = 0
-    day.alerts = data.alerts.map((rowAlert: any) => {
-      const alert = new Alert()
-
-      alert.description = rowAlert.description
-      alert.event = rowAlert.event
-      alert.senderName = rowAlert.sender_name
-      alert.start = rowAlert.start
-
-      return alert
-    })
-    day.daily = data.daily.map((item: any) => {
-      const daily = new Daily()
-      const temp = new Temp()
-      const feelsLike = new FeelsLike()
-
-      daily.weather = item.weather.map((rowWeather: any) => {
-        const weather = new Weather()
-
-        weather.description = rowWeather.description
-        weather.icon = rowWeather.icon
-        weather.id = rowWeather.id
-        weather.main = rowWeather.main
-
-        return weather
-      })
-
-      temp.day = item.temp.day
-      temp.max = item.temp.max
-      temp.min = item.temp.min
-
-      daily.temp = temp
-
-      feelsLike.day = item.feels_like.day
-
-      daily.feelsLike = feelsLike
-
-      return daily
-    })
-    day.lat = data.lat
-    day.lon = data.lon
-    day.timezone = data.timezone
-
-    validate(day).then(errors => {
-      // errors is an array of validation errors
-      if (errors.length > 0) {
-        console.log('validation failed. errors: ', errors)
-      } else {
-        console.log('validation succeed')
-      }
-    })
+    return result
   } catch (err) {
     console.error(err)
   }
 }
-
-// validate(day).then((errors) => {
-//   // errors is an array of validation errors
-//   if (errors.length > 0) {
-//     console.log('validation failed. errors: ', errors)
-//   } else {
-//     console.log('validation succeed')
-//   }
-// })
-
-// validateOrReject(day).catch((errors) => {
-//   console.log('Promise rejected (validation failed). Errors: ', errors)
-// })

@@ -1,26 +1,18 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
-import { getWeatherForWeek } from './dataSources/index'
+import { getWeatherForWeek, getWeatherFromPast } from './dataSources/index'
+import { APIKey } from './dataSources/common'
+import { WeatherAppPage } from './pages/WeatherAppPage'
 
 function App () {
-  getWeatherForWeek()
+  getWeatherForWeek(45.0357, 38.975313, APIKey)
+  getWeatherFromPast(45.0357, 38.975313, 1622034866, APIKey)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header></header>
+      <body>
+        <WeatherAppPage />
+      </body>
     </div>
   )
 }
