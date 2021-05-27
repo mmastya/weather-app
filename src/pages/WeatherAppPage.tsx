@@ -9,9 +9,10 @@ export function WeatherAppPage () {
         <p>Weather</p>
         <p className="weatherAppPage__title-forecast">forecast</p>
       </div>
+      <div className="weatherAppPage__whiteBoxes">
+        <BlockData />
+      </div>
 
-      <BlockData />
-      <BlockData />
     </div>
   )
 }
