@@ -13,14 +13,9 @@ body {
    
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("./images/1.svg") 100% 0 no-repeat fixed,
-                url("./images/5.svg") 118% 0 no-repeat fixed, 
-                url("./images/6.svg") 5% 0 no-repeat fixed,
-                url("./images/2.svg")0 100% no-repeat fixed,
-                url("./images/4.svg")0 100% no-repeat fixed,
-                url("./images/3.svg")0 100% no-repeat fixed;
-    background-size: auto, auto; 
-    background-color: #373AF5;
+  background: url("./images//Bg.png") no-repeat; 
+  background-size: auto; 
+  background-color: #373AF5;
 }
 
 code {

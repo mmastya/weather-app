@@ -1,11 +1,4 @@
-.weatherAppPage__title {
-    font-family: 'Ubuntu', sans-serif;;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 102px;
-    line-height: 122px;
-    color: #FFFFFF;
-    margin-left: -19%;
+.weatherAppPage__logo {
     padding-top: 65px;
     padding-bottom: 60px;
 }
