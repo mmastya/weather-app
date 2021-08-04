@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import './styles/App.css'
 import { getWeatherForWeek, getWeatherFromPast } from './dataSources/index'
 import { APIKey } from './dataSources/common'
 import { WeatherAppPage } from './pages/WeatherAppPage'
