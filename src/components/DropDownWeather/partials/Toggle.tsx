@@ -8,6 +8,7 @@ import React from 'react'
 export const Toggle = () => {
   return (
     <div >
+      <button className={'dropdown-box__toggle dropdown-box--opened'} type="button"/>
     </div>
   )
 }

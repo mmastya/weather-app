@@ -10,13 +10,16 @@ import './ DropDownWeather.css'
 
 export const DropDownWeather = () => {
   return (
-    <div>
-      <Toggle/>
+    <div className="dropdown-box">
+      <div className="dropdown-box__toggle-box">
+        <p className="dropdown-box__toggle-box-title">Select city</p>
+        <Toggle/>
+      </div>
       <List>
-        <Item>Самара</Item>
+        <Item>Samara</Item>
         <Item>Тольятти</Item>
         <Item>Саратов</Item>
-        <Item>Казань</Item>
+        <Item>Kazan</Item>
         <Item>Краснодар</Item>
       </List>
     </div>
