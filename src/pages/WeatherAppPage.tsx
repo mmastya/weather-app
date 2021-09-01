@@ -1,10 +1,9 @@
 import React from 'react'
-import { DropDownWeather } from '../components/DropDownWeather/DropDownWeather'
-import '../styles/weatherAppPage.css'
 
 export function WeatherAppPage () {
   return (
     <div className="weather-app">
+      <div className="weather-app__wrapper">
       <header className="weather-app__header">
         <div className="weather-app__header-title">
           <p className="weather-app__header-title-weather">Weather</p>
@@ -14,16 +13,17 @@ export function WeatherAppPage () {
       <main className="weather-app__main">
         <div className="weather-app__white-box">
         <h1 className="weather-app__white-box-title">7 Days Forecast</h1>
-        <DropDownWeather/>
+
       </div>
       <div className="weather-app__white-box">
         <h1 className="weather-app__white-box-title">Forecast for a Date in the Past</h1>
-        <DropDownWeather/>
+
       </div>
       </main>
       <footer className="weather-app__footer">
         <span className="weather-app__footer-copyright">с любовью от mercury development</span>
       </footer>
+      </div>
     </div>
   )
 }
