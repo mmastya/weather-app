@@ -1,0 +1,25 @@
+body {
+    width: 320rem;
+    margin: 0;
+    background-color: #373AF5;
+    background-image: url("./static/images/Vector5.svg"), url("./static/images/Vector2.svg"), url("./static/images/Vector1.svg");
+    background-repeat: no-repeat;
+    background-size: 150rem, 231rem, 173rem;
+    background-position: -37rem -21rem, 120rem 0, top right;
+}
+
+@media (min-width: 1280px) {
+    body {
+        width: 1280rem;
+        background-size: 496rem, 766rem, 572rem;
+        background-position: 0 0, 836rem 0, top right -200rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        width: 1440rem;
+        background-size: 496rem, 766rem, 572rem;
+        background-position: 0 0, 800rem 0, top right 0rem
+    }
+}
