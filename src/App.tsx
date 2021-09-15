@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { WeatherAppPage } from './pages/WeatherAppPage'
+import './App.css'
 
 function App () {
   const htmlRef = useRef<HTMLElement | null>(null)
@@ -9,16 +9,16 @@ function App () {
       return
     }
 
-    const { width, height } = htmlRef.current.getBoundingClientRect()
+    const { width } = htmlRef.current.getBoundingClientRect()
 
     let baseFontSize = width / 1440
 
     if (width >= 1440) {
-      baseFontSize = Math.min(width / 1440, height / 960)
-    } else if (width >= 1028 && width < 1440) {
-      baseFontSize = Math.min(width / 1028, height / 768)
+      baseFontSize = Math.min(width / 1440)
+    } else if (width >= 1280 && width < 1440) {
+      baseFontSize = Math.min(width / 1280)
     } else {
-      baseFontSize = Math.min(width / 320, height / 667)
+      baseFontSize = Math.min(width / 320)
     }
 
     htmlRef.current.style.cssText = `font-size: ${baseFontSize}px;`
@@ -37,10 +37,8 @@ function App () {
   }, [])
 
   return (
-    <div className="App">
-      <header></header>
+    <div className="app">
       <div>
-        <WeatherAppPage />
       </div>
     </div>
   )
