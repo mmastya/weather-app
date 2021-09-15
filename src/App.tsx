@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import { WeatherAppPage } from './pages/WeatherAppPage'
 import './App.css'
 
 function App () {
@@ -39,9 +38,16 @@ function App () {
 
   return (
     <div className="app">
-      <header></header>
       <div>
-        <WeatherAppPage />
+  {/*       <div className='app__bg-pink'>
+          <img className='app__bg-pink-img' src={Vector3} alt='розовая гора'/>
+        </div>
+        <div className='app__bg-line'>
+          <img className='app__bg-line-img' src={Vector6} alt='синяя линия'/>
+        </div>
+        <div className='app__bg-blue'>
+          <img className='app__bg-blue-img' src={Vector4} alt='синяя гора'/>
+        </div> */}
       </div>
     </div>
   )
