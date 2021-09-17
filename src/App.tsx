@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import './App.css'
+import PlaceholderIcon from './components/placeholderIcon/PlaceholderIcon'
 
 function App () {
   const htmlRef = useRef<HTMLElement | null>(null)
@@ -40,6 +41,7 @@ function App () {
     <div className="app">
       <div className='title'>
         Weather forecast
+        <PlaceholderIcon/>
       </div>
     </div>
   )
