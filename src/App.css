@@ -4,6 +4,8 @@
     --color-text-dark-blue: #2C2D76;
     --color-text-gray: #8083A4;
     --font-family: TrebuchetMS, Avenir Next, BlinkMacSystemFonts, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    --tablet-width: 1280px;
+    --desktop-width: 1440px;
 }
 
 body {
@@ -23,11 +25,27 @@ body {
     font-size: 32rem;
 }
 
+.app__white-box-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10rem;
+}
+.app__white-box-container-mb {
+    margin-bottom: 10rem;
+}
+
  @media (min-width: 1280px) {
     body {
         width: 1280rem;
         background-size: 496rem, 766rem, 572rem, 596rem, 820rem;
         background-position: 0 0, 836rem 0, top right -200rem, bottom left, bottom left, bottom left;
+    }
+
+    .app__white-box-container{
+        margin: 0 310rem;
+    }
+    .app__white-box-container-mb {
+        margin-bottom: 34rem;
     }
 }
 
@@ -36,5 +54,14 @@ body {
         width: 1440rem;
         background-size: 496rem, 766rem, 572rem, 596rem, 820rem;
         background-position: 0 0, 800rem 0, top right 0rem, bottom left, bottom left, bottom left;
+    }
+
+    .app__white-box-container{
+        flex-direction: row;
+        margin: 0 41rem;
+    }
+    .app__white-box-container-mb {
+        margin-bottom: 0;
+        margin-right: 34rem;
     }
 }

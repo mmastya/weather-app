@@ -1,0 +1,14 @@
+.white-box {
+    width: 300rem;
+    height: 464rem;
+    background: var(--color-text-white);
+    box-shadow: 0px 4px 4px rgba(4, 5, 73, 0.25), 14px 14px 20px rgba(5, 6, 114, 0.2);
+    border-radius: 8px;
+}
+
+@media (min-width: 1280px) {
+    .white-box {
+        width: 660rem;
+        height: 524rem;
+    }
+}
