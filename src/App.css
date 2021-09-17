@@ -1,3 +1,11 @@
+:root {
+    --color-bg: #373AF5;
+    --color-text-white: #FFFFFF;
+    --color-text-dark-blue: #2C2D76;
+    --color-text-gray: #8083A4;
+    --font-family: TrebuchetMS, Avenir Next, BlinkMacSystemFonts, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
 body {
     width: 320rem;
     height: 100vh;
@@ -7,6 +15,12 @@ body {
     background-repeat: no-repeat;
     background-size: 150rem, 231rem, 173rem, 274rem, 320rem, 320rem;
     background-position: -28rem -29rem, 134rem 0, 160rem 0, -12rem bottom, 0rem bottom, -80rem bottom;
+}
+
+.title {
+    font-family: var(--font-family);
+    color: var(--color-text-white);
+    font-size: 32rem;
 }
 
  @media (min-width: 1280px) {

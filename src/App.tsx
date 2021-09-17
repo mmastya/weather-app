@@ -38,7 +38,8 @@ function App () {
 
   return (
     <div className="app">
-      <div>
+      <div className='title'>
+        Weather forecast
       </div>
     </div>
   )
