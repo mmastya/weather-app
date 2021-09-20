@@ -1,0 +1,13 @@
+.placeholder {
+    
+}
+
+.placeholder__text{
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16rem;
+    line-height: 24rem;
+    text-align: center;
+    color: var(--color-text-gray);
+}

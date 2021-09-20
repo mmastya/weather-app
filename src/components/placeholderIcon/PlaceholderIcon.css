@@ -1,0 +1,13 @@
+.icon-close-container {
+    margin: 0 40rem;
+}
+
+.icon-close {
+    width: 160rem;
+}
+
+@media (min-width: 1280px) {
+    .icon-close-container {
+        margin: 0 200rem;
+    }
+}

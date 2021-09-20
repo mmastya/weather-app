@@ -1,0 +1,8 @@
+.title__text {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32rem;
+    line-height: 32rem;
+    color: var(--color-text-dark-blue)
+}
