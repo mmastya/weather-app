@@ -1,0 +1,28 @@
+.weather-app-page__white-box-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10rem;
+}
+.weather-app-page__white-box-container-mb {
+    margin-bottom: 10rem;
+}
+
+ @media (min-width: 1280px) {
+    .weather-app-page__white-box-container{
+        margin: 0 310rem;
+    }
+    .weather-app-page__white-box-container-mb {
+        margin-bottom: 34rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .weather-app-page__white-box-container{
+        flex-direction: row;
+        margin: 0 41rem;
+    }
+    .weather-app-page__white-box-container-mb {
+        margin-bottom: 0;
+        margin-right: 34rem;
+    }
+}

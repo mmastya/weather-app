@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import './App.css'
-import WhiteBox from './components/whiteBox/WhiteBox'
+import { WeatherAppPage } from './pages/WeatherAppPage'
 
 function App () {
   const htmlRef = useRef<HTMLElement | null>(null)
@@ -39,13 +39,7 @@ function App () {
 
   return (
     <div className="app">
-      <div className='title'>
-        Weather forecast
-        <div className='app__white-box-container'>
-          <div className='app__white-box-container-mb'><WhiteBox/></div>
-          <WhiteBox/>
-        </div>
-      </div>
+      <WeatherAppPage/>
     </div>
   )
 }

@@ -19,33 +19,15 @@ body {
     background-position: -28rem -29rem, 134rem 0, 160rem 0, -12rem bottom, 0rem bottom, -80rem bottom;
 }
 
-.title {
-    font-family: var(--font-family);
-    color: var(--color-text-white);
-    font-size: 32rem;
+h1{
+    margin: 0;
 }
 
-.app__white-box-container{
-    display: flex;
-    flex-direction: column;
-    margin: 0 10rem;
-}
-.app__white-box-container-mb {
-    margin-bottom: 10rem;
-}
-
- @media (min-width: 1280px) {
+@media (min-width: 1280px) {
     body {
         width: 1280rem;
         background-size: 496rem, 766rem, 572rem, 596rem, 820rem;
         background-position: 0 0, 836rem 0, top right -200rem, bottom left, bottom left, bottom left;
-    }
-
-    .app__white-box-container{
-        margin: 0 310rem;
-    }
-    .app__white-box-container-mb {
-        margin-bottom: 34rem;
     }
 }
 
@@ -54,14 +36,5 @@ body {
         width: 1440rem;
         background-size: 496rem, 766rem, 572rem, 596rem, 820rem;
         background-position: 0 0, 800rem 0, top right 0rem, bottom left, bottom left, bottom left;
-    }
-
-    .app__white-box-container{
-        flex-direction: row;
-        margin: 0 41rem;
-    }
-    .app__white-box-container-mb {
-        margin-bottom: 0;
-        margin-right: 34rem;
     }
 }
