@@ -1,0 +1,43 @@
+.page-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 243rem;
+    margin: 0 auto;
+}
+
+.page-title__weather {
+    align-self: flex-start;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32rem;
+    line-height: 32rem;
+    color: var(--color-text-white);
+}
+
+.page-title__forecast {
+    align-self: flex-end;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32rem;
+    line-height: 32rem;
+    color: var(--color-text-white);
+}
+
+@media (min-width: 1280px) {
+    .page-title {
+        width: 745rem;
+    }
+    
+    .page-title__weather {
+        font-size: 102rem;
+        line-height: 122rem;
+    }
+    
+    .page-title__forecast {
+        font-size: 102rem;
+        line-height: 122rem;
+    }
+}

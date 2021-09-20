@@ -1,15 +1,24 @@
+.weather-app-page {
+    padding-top: 32rem;
+}
+
 .weather-app-page__white-box-container{
     display: flex;
     flex-direction: column;
-    margin: 0 10rem;
+    margin: 25px 10rem 0rem 10rem;
 }
 .weather-app-page__white-box-container-mb {
     margin-bottom: 10rem;
 }
 
- @media (min-width: 1280px) {
+@media (min-width: 1280px) {
+    .weather-app-page {
+        padding-top: 65rem;
+        margin-bottom: 80rem;
+    }
+
     .weather-app-page__white-box-container{
-        margin: 0 310rem;
+        margin: 65px 310rem 0rem 310rem;
     }
     .weather-app-page__white-box-container-mb {
         margin-bottom: 34rem;
@@ -17,9 +26,14 @@
 }
 
 @media (min-width: 1440px) {
+    .weather-app-page {
+        padding-top: 65rem;
+        margin-bottom: 233rem;
+    }
+
     .weather-app-page__white-box-container{
         flex-direction: row;
-        margin: 0 41rem;
+        margin: 60px 41rem 0rem 41rem;
     }
     .weather-app-page__white-box-container-mb {
         margin-bottom: 0;
