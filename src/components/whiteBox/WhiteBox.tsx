@@ -5,14 +5,24 @@ import WeatherCard from '../weatherCard/WeatherCard'
 import WhiteBoxContainer from '../whiteBoxContainer/WhiteBoxContainer'
 import './WhiteBox.css'
 import sunCloud from '../../static/images/sun-cloud.svg'
+import DataPicker from '../dataPicker/DataPicker'
 
-function WhiteBox (props:any) {
+interface IWhiteBox {
+  title: string;
+  alone?: boolean;
+  isDataInput?: boolean;
+}
+
+function WhiteBox (props: IWhiteBox) {
   const show = true
 
   return (
     <div className="white-box">
       <WhiteBoxContainer>
         <Title text={props.title}/>
+        <div className='white-box__data-picker-container'>
+          <DataPicker/>
+        </div>
         {show ? <WeatherCard isAlone={props.alone} date={'27 sep 2021'} weatherIcon={sunCloud} degree={'+17°'} alt={'солнце'}/> : <Placeholder/>}
       </WhiteBoxContainer>
     </div>

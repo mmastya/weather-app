@@ -1,7 +1,12 @@
 import React from 'react'
 import './PageTitle.css'
 
-function PageTitle (props:any) {
+interface IPageTitle {
+  titleWeather: string;
+  titleForecast: string;
+}
+
+function PageTitle (props:IPageTitle) {
   return (
     <div className="page-title">
         <div className='page-title__weather'>{props.titleWeather}</div>
