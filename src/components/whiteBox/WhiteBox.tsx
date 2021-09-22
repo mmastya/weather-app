@@ -9,7 +9,7 @@ import DataPicker from '../dataPicker/DataPicker'
 
 interface IWhiteBox {
   title: string;
-  alone?: boolean;
+  isAlone?: boolean;
   isDataInput?: boolean;
 }
 
@@ -23,7 +23,7 @@ function WhiteBox (props: IWhiteBox) {
         <div className='white-box__data-picker-container'>
           <DataPicker/>
         </div>
-        {show ? <WeatherCard isAlone={props.alone} date={'27 sep 2021'} weatherIcon={sunCloud} degree={'+17°'} alt={'солнце'}/> : <Placeholder/>}
+        {show ? <WeatherCard isAlone={props.isAlone} date={'27 sep 2021'} weatherIcon={sunCloud} degree={'+17°'} alt={'солнце'}/> : <Placeholder/>}
       </WhiteBoxContainer>
     </div>
   )

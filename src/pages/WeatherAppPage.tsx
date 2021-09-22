@@ -9,7 +9,7 @@ export function WeatherAppPage () {
       <PageTitle titleWeather={'Weather'} titleForecast={'forecast'}/>
       <div className='weather-app-page__white-box-container'>
         <div className='weather-app-page__white-box-container-mb'><WhiteBox title={'7 Days Forecast'}/></div>
-        <WhiteBox alone={true} title={'Forecast for a Date in the Past'}/>
+        <WhiteBox isAlone={true} title={'Forecast for a Date in the Past'}/>
       </div>
     </div>
   )
