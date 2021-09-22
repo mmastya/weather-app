@@ -1,7 +1,11 @@
 import React from 'react'
 import './WhiteBoxContainer.css'
 
-function WhiteBoxContainer (props:any) {
+interface IWhiteBoxContainer {
+  children: React.ReactNode
+}
+
+function WhiteBoxContainer (props:IWhiteBoxContainer) {
   return (
     <div className="white-box-container">{props.children}</div>
   )

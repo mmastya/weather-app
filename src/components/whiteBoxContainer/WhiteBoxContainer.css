@@ -1,9 +1,9 @@
 .white-box-container{
-    padding: 32rem 36rem 0 24rem;
+    padding: 32rem 24rem 60rem 24rem;
 }
 
 @media (min-width: 1280px) {
     .white-box-container{
-        padding: 50rem 36rem 0 58rem;
+        padding: 50rem 58rem 70rem 58rem;
     } 
 }

@@ -1,0 +1,24 @@
+.data-picker-input {
+    width: 252rem;
+    padding: 12rem 16rem 12rem 16rem;
+    border: 2px solid rgba(128, 131, 164, 0.2);
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16rem;
+    line-height: 24rem;
+    color: var(--color-text-dark-blue);
+}
+
+[type="date"] {
+    background-image: url(../../static/images/calendar.svg);
+    background-color:rgba(128, 131, 164, 0.06)   no-repeat;
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
