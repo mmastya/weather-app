@@ -10,18 +10,16 @@ export function Select () {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState('Select city')
 
-  const handleClick = () => setIsOpen(!isOpen)
-  const onOptionClicked = (value: any) => () => {
+  const toggleClick = () => setIsOpen(!isOpen)
+
+  const setOption = (value: string) => () => {
     setSelectedOption(value)
     setIsOpen(false)
-    console.log(value)
   }
 
   useEffect(() => {
     const onClick = () => {
-      if (dropdownRef.current !== null) {
-        setIsOpen(!isOpen)
-      }
+      setIsOpen(!isOpen)
     }
 
     if (isOpen) {
@@ -35,13 +33,13 @@ export function Select () {
 
   return (
     <div className='select'>
-      <div className='select__box' onClick={handleClick}>
-        <p className='select__placeholder' onChange={onOptionClicked}>{selectedOption}</p>
+      <div className='select__box' onClick={toggleClick}>
+        <p className='select__placeholder'>{selectedOption}</p>
         {isOpen ? <ArrowClose/> : <ArrowOpen/> }
       </div>
       <div ref={dropdownRef} className={`select__options ${isOpen ? 'select__options--open' : 'select__options--close'}`}>
         {cities.map(city => (
-          <div className='select__option' onClick={onOptionClicked(city)} key={Math.random()}>
+          <div className='select__option' onClick={setOption(city)} key={Math.random()}>
             {city}
           </div>
         ))}
