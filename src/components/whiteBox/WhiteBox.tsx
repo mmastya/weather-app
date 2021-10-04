@@ -6,6 +6,7 @@ import WhiteBoxContainer from '../whiteBoxContainer/WhiteBoxContainer'
 import './WhiteBox.css'
 import sunCloud from '../../static/images/sun-cloud.svg'
 import DataPicker from '../dataPicker/DataPicker'
+import { Select } from '../select/Select'
 
 interface IWhiteBox {
   title: string;
@@ -20,8 +21,11 @@ function WhiteBox (props: IWhiteBox) {
     <div className="white-box">
       <WhiteBoxContainer>
         <Title text={props.title}/>
-        <div className='white-box__data-picker-container'>
-          <DataPicker/>
+        <div className='white-box__controls'>
+          <Select/>
+          <div className='white-box__data-picker-container'>
+            {props.isAlone ? <DataPicker/> : null}
+          </div>
         </div>
         {show ? <WeatherCard isAlone={props.isAlone} date={'27 sep 2021'} weatherIcon={sunCloud} degree={'+17°'} alt={'солнце'}/> : <Placeholder/>}
       </WhiteBoxContainer>

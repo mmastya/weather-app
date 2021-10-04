@@ -10,9 +10,25 @@
     margin-bottom: 30rem;
 }
 
+.white-box__controls {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (min-width: 1280px) {
     .white-box {
         width: 660rem;
-        height: 524rem;
+    }
+
+    .white-box__data-picker-container {
+        margin-top: 0;
+        margin-bottom: 0
+    }
+
+    .white-box__controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 54rem;
     }
 }
