@@ -1,0 +1,60 @@
+.select {
+    position: relative;
+}
+
+.select__box {
+    display: flex;
+    justify-content: space-between;
+    width: 252rem;
+    padding: 12rem 16rem 12rem 16rem;
+    background: rgba(128, 131, 164, 0.06);
+    border: 2rem solid rgba(128, 131, 164, 0.2);
+    box-sizing: border-box;
+    border-radius: 8rem;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16rem;
+    line-height: 24rem;
+    color: var(--color-text-dark-blue);
+}
+
+.select__options{
+    position: absolute;
+    top: 64rem;
+    width: 252rem;
+    height: 160rem;
+    background: var(--color-text-white);
+    border: 2rem solid rgba(128, 131, 164, 0.06);
+    box-sizing: border-box;
+    box-shadow: 0rem 2rem 4rem rgba(4, 5, 73, 0.16), 14rem 14rem 20rem rgba(5, 6, 114, 0.08);
+    border-radius: 8rem;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16rem;
+    line-height: 24rem;
+    color: var(--color-text-dark-blue);
+    overflow: auto;
+}
+
+.select__options--open {
+    display: block;
+}
+
+.select__options--close {
+    display: none;
+}
+
+.select__option {
+    padding: 6rem 10rem 6rem 16rem;
+    cursor: pointer;
+}
+
+.select__option:hover {
+    background: rgba(128, 131, 164, 0.06);
+    border-radius: 8px;
+    width: 230rem;
+    margin-right: 6rem;
+}
+
